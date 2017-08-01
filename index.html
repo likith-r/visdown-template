@@ -27,7 +27,7 @@
 <body>
 
 <div id="visdown-input">  
-  # Visdown
+<!--   # Visdown
 
   **Make visualisations using only markdown**
 
@@ -112,6 +112,112 @@ encoding:
   color:
     type: nominal
     field: denom
+```
+
+
+# ranking
+
+<h1> Hello </h1>
+
+
+
+
+
+
+```vis
+width: 700
+height: 500
+
+data:
+  url: data/notes.csv
+
+    
+mark: bar
+
+encoding:
+  x:
+    
+    type: nominal
+    field: denom
+  y:
+    field: number
+    type: quantitative
+  color:
+    type: nominal
+    field: denom
+
+```
+
+<h1> distribution </h1>
+
+
+```vis
+width: 700
+height: 500
+
+data:
+  url: data/notes.csv
+
+    
+mark: bar
+
+encoding:
+  x:
+    
+    type: quantitative
+    field: money
+  y:
+    field: denom
+    type: nominal
+  color:
+    type: nominal
+    field: denom
+
+``` -->
+
+<h1> concat </h1>
+
+
+```vis
+width: 700
+height: 500
+
+data:
+  url: data/notes.csv
+layer:
+  -mark:bar
+
+
+encoding:
+  y:
+    
+    type: nominal
+    field: denom
+  x:
+    field: number
+    type: quantitative
+  color:
+    type: nominal
+    field: denom
+
+
+
+    
+layer:
+  -mark:point
+
+encoding:
+  y:
+    
+    type: nominal
+    field: denom
+  x:
+    field: number
+    type: quantitative
+<!--   color:
+    type: nominal
+    field: denom -->
+
 ```
 
 </div>

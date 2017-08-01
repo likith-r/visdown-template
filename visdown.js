@@ -39,7 +39,7 @@ window.onload = function () {
 
 	window.visdown = function () {
 		console.log('visdown');
-		var markdownText = input.textContent;
+		var markdownText = input.innerHTML;
 		output.innerHTML = marked(markdownText, { renderer: renderer});
 		vegaliteRender();
 	}
