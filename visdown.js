@@ -5,7 +5,18 @@ window.onload = function () {
 	var renderer = new marked.Renderer();
 	var counter = 0;
 	var specs = [];
-	var opts = {"mode": "vega-lite", "renderer": "svg" };
+
+	var config = {
+		"background": 'black',
+		"axis": {
+			"labelColor": 'white'
+		},
+		"legend": {
+			"labelColor": 'white'
+		}
+	};
+
+	var opts = {"mode": "vega-lite", "renderer": "svg", "config": config };
 
 
 	// Render the ```vis as a div and save the json spec
